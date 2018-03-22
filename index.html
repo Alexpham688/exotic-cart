@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car Cart</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <!--header-->
+      <header>
+        <h1>Exotic cars</h1>
+        <div id="cart-container">
+          <div id="cart">
+            <i class="glyphicon glyphicon-shopping-cart open"></i>
+            <button type="button" id="empty-cart"aria-hidden="true">Empty cart</button>
+          </div>
+          <span class='item-count'></span>
+        </div>
+      </header>
+
+      <!--shopping-cart-->
+      <section id="shopping-cart">
+        <div class="cart-item-container">
+          <h2>items in your cart</h2>
+          <i class="glyphicon glyphicon-remove-circle close"></i>
+          <div class="cart-items"></div>
+          <div class="cart-total"></div>
+        </div>
+      </section>
+
+      <!--nav- bar-->
+      <nav>
+        <ul>
+          <li><a href="#"class="all-exotics">All exotics</a></li>
+          <li><a href="#"class="germany">germany</a></li>
+          <li><a href="#"class="italy">italy</a></li>
+          <li><a href="#"class="japan">japan</a></li>
+          <li><a href="#"class="england">england</a></li>
+          <li><a href="#"class="america">america</a></li>
+        </ul>
+      </nav>
+
+      <!--item container-->
+      <section id="item-container">
+        <p><i>hover over image to see flip car over</i></p>
+        <!--item 1-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item italy">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/f12.jpg" alt="ferrari f12">
+            </div>
+            <div class="item-text">
+              <h4>Ferrari f12 Berlinetta</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <!-- <button type="button" class="open-text">Details</button> -->
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 2-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item germany">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/911.jpg" alt="porsche 911 turbo">
+            </div>
+            <div class="item-text">
+              <h4>Porsche 911 turbo</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 3-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item america">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/viper.jpg" alt="dodge viper gt">
+            </div>
+            <div class="item-text">
+              <h4>dodge viper gt</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+        <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 4-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item japan">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/lfa.png" alt="lexus lfa">
+            </div>
+            <div class="item-text">
+              <h4>Lexus lfa</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 5-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item england">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/one77.jpg" alt="aston martin one-77">
+            </div>
+            <div class="item-text">
+              <h4>Aston martin one-77</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 6-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item germany">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/r8.jpg" alt="audi r8">
+            </div>
+            <div class="item-text">
+              <h4>Audi r8</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price ">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span> -->
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 7-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item england">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/cx75.jpg" alt="jaguar c-x75">
+            </div>
+            <div class="item-text">
+              <h4>jaguar c-x75</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 8-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item italy">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/granturismo.jpg" alt="maserati gran turismo">
+            </div>
+            <div class="item-text">
+              <h4>maserati gran turismo</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 9-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item germany">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/m9.jpg" alt="bmw m9">
+            </div>
+            <div class="item-text">
+              <h4>bmw m9</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 10-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item america">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/venom.jpg" alt="hennessey venom">
+            </div>
+            <div class="item-text">
+              <h4>hennessey venom gt</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 11-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item japan">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/gtr.png" alt="nissan gtr">
+            </div>
+            <div class="item-text">
+              <h4>nissan gtr r35</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+        <!--item 12-->
+        <div class="col-lg-3 col-md-3 col-sm-3 item italy">
+          <div class="item-details">
+            <div class="item-image">
+              <img src="img/huracan.jpg" alt="lamborghini huracan">
+            </div>
+            <div class="item-text">
+              <h4>lamborghini huracan</h4>
+              <p class="price-container glyphicon glyphicon-usd"><span class="price">100000</span></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+          </div>
+          <button type="button" class='add'>Add to cart</button>
+        </div>
+
+        <!--item-container-end-->
+      </section>
+      <!--container-fluid end-->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
