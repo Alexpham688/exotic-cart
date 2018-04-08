@@ -7,9 +7,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lightbox.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div id="container">
 
       <!--header-->
       <header>
@@ -45,14 +46,17 @@
         </ul>
       </nav>
 
+
       <!--item container-->
       <section id="item-container">
-        <p><i>hover over image to see flip car over</i></p>
+        <p class="comment">click on image to enlarge</p>
+
         <!--item 1-->
         <div class="col-lg-3 col-md-3 col-sm-3 item italy">
+
           <div class="item-details">
-            <div class="item-image">
-              <img src="img/f12.jpg" alt="ferrari f12">
+            <div class="item-image f12"id="ferrari">
+              <a href="images/f12-2.jpg"data-lightbox="exotics"data-title="2016 Ferrari F12 Berlinetta"data-desc="6.3-liter V12"><img src="img/f12.jpg" alt="ferrari f12 berlinetti"></a>
             </div>
             <div class="item-text">
               <h4>Ferrari f12 Berlinetta</h4>
@@ -60,14 +64,14 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
           </div>
-          <!-- <button type="button" class="open-text">Details</button> -->
           <button type="button" class='add'>Add to cart</button>
         </div>
+
         <!--item 2-->
         <div class="col-lg-3 col-md-3 col-sm-3 item germany">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/911.jpg" alt="porsche 911 turbo">
+              <a href="images/911-2.jpg"data-lightbox="exotics"data-title="Porsche 911 turbo S"data-desc="3.8-liter twin-turbo"><img src="img/911.jpg" alt="porsche 911 turbo"></a>
             </div>
             <div class="item-text">
               <h4>Porsche 911 turbo</h4>
@@ -81,7 +85,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item america">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/viper.jpg" alt="dodge viper gt">
+              <a href="images/viper-2.jpg"data-lightbox="exotics"data-title="2016 Dodge Viper GT"data-desc="8.4-liter V10"><img src="img/viper.jpg" alt="dodge viper gt"></a>
             </div>
             <div class="item-text">
               <h4>dodge viper gt</h4>
@@ -95,7 +99,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item japan">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/lfa.png" alt="lexus lfa">
+              <a href="images/lfa-2.jpg"data-lightbox="exotics"data-title="2014 Lexus LFA"data-desc="4.8-liter V10"><img src="img/lfa.png" alt="lexus lfa"></a>
             </div>
             <div class="item-text">
               <h4>Lexus lfa</h4>
@@ -109,7 +113,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item england">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/one77.jpg" alt="aston martin one-77">
+              <a href="images/one77-2.jpg"data-lightbox="exotics"data-title="2017 Aston Martin ONE-77"data-desc="7.3-liter V12"><img src="img/one77.jpg" alt="aston martin one-77"></a>
             </div>
             <div class="item-text">
               <h4>Aston martin one-77</h4>
@@ -123,7 +127,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item germany">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/r8.jpg" alt="audi r8">
+              <a href="images/r8-2.jpg"data-lightbox="exotics"data-title="2016 Audi R8"data-desc="6.3-liter V10"><img src="img/r8.jpg" alt="audi r8"></a>
             </div>
             <div class="item-text">
               <h4>Audi r8</h4>
@@ -138,7 +142,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item england">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/cx75.jpg" alt="jaguar c-x75">
+              <a href="images/cx75-2.jpg"data-lightbox="exotics"data-title="2015 Jaguar C-X75"data-desc="1.7-liter </br> turbocharged and </br> supercharged 4 cyl."><img src="img/cx75.jpg" alt="jaguar c-x75"></a>
             </div>
             <div class="item-text">
               <h4>jaguar c-x75</h4>
@@ -152,7 +156,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item italy">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/granturismo.jpg" alt="maserati gran turismo">
+              <a href="images/granturismo-2.jpg"data-title="2015 Maserati Granturismo"data-desc="4.7-liter V8"><img src="img/granturismo.jpg" alt="maserati gran turismo"></a>
             </div>
             <div class="item-text">
               <h4>maserati gran turismo</h4>
@@ -166,7 +170,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item germany">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/m9.jpg" alt="bmw m9">
+              <a href="images/m9-2.jpg"data-lightbox="exotics"data-title="2017 BMW M9"data-desc="concept V8"><img src="img/m9.jpg" alt="bmw m9"></a>
             </div>
             <div class="item-text">
               <h4>bmw m9</h4>
@@ -180,7 +184,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item america">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/venom.jpg" alt="hennessey venom">
+              <a href="images/venom-2.jpg"data-lightbox="exotics"data-title="2015 Hennessey Venom GT"data-desc="7.0-liter V8"><img src="img/venom.jpg" alt="hennessey venom"></a>
             </div>
             <div class="item-text">
               <h4>hennessey venom gt</h4>
@@ -194,7 +198,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item japan">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/gtr.png" alt="nissan gtr">
+              <a href="images/gtr-2.jpg"data-lightbox="exotics"data-title="2015 Nissan GT-R R35"data-desc="3.8-liter </br> twin-turbo V6"><img src="img/gtr.png" alt="nissan gtr"></a>
             </div>
             <div class="item-text">
               <h4>nissan gtr r35</h4>
@@ -208,7 +212,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 item italy">
           <div class="item-details">
             <div class="item-image">
-              <img src="img/huracan.jpg" alt="lamborghini huracan">
+              <a href="images/huracan-2.jpg"data-lightbox="exotics"data-title="2015 Lamborghini Huracan"data-desc="5.2-liter V10"><img src="img/huracan.jpg" alt="lamborghini huracan"></a>
             </div>
             <div class="item-text">
               <h4>lamborghini huracan</h4>
@@ -224,10 +228,13 @@
       <!--container-fluid end-->
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="js/lightbox-plus-jquery.js"></script> -->
+    <script src="js/lightbox.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

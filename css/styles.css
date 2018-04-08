@@ -218,19 +218,24 @@ nav {
       text-decoration: none;
       color: #00FFFF; }
 
+#item-container .comment {
+  margin-left: 150px;
+  font-style: italic; }
+
 #item-container .item-details {
-  height: 300px; }
+  height: 300px;
+  width: 160px; }
 
 #item-container .item {
   border-right: 1px solid #333;
   margin-bottom: 10px;
-  height: 400px; }
+  height: 450px; }
   #item-container .item button {
     background: #333;
     color: #fff;
     height: 50px;
     width: 120px;
-    margin-top: 10px;
+    margin-top: 80px;
     margin-left: -10px;
     box-shadow: -1px 4px 6px 1px rgba(60, 60, 60, 0.5);
     background-image: linear-gradient(45deg, #ccc 50%, transparent 50%);
@@ -250,7 +255,6 @@ nav {
       border: 1px solid #00FFFF; }
   #item-container .item img {
     margin: 5px auto;
-    cursor: pointer;
     width: 170px;
     height: 120px;
     z-index: -1;
@@ -259,29 +263,82 @@ nav {
     -moz-transition: all 4s ease-in-out;
     transition: all 4s ease-in-out;
     cursor: pointer; }
-    #item-container .item img:hover {
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-      box-shadow: -1px 6px 8px 1px rgba(40, 40, 40, 0.5);
-      border: 2px solid #00FFFF;
-      z-index: 99; }
   #item-container .item h4 {
     text-transform: uppercase;
     height: 50px;
     font-family: 'Roboto', sans-serif; }
   #item-container .item .item-text {
-    height: 270px; }
+    height: 250px; }
+  #item-container .item .item-image {
+    width: 150px;
+    height: 120px; }
+    #item-container .item .item-image img {
+      margin: 5px auto;
+      z-index: -1;
+      box-shadow: 0 6px 6px 1px rgba(60, 60, 60, 0.5);
+      -webkit-transition: all 4s ease-in-out;
+      -moz-transition: all 4s ease-in-out;
+      transition: all 4s ease-in-out;
+      cursor: pointer; }
+
+.slider {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+  .slider img {
+    width: 610px;
+    height: 410px; }
+  .slider .gallery {
+    position: relative;
+    float: right;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ccc;
+    padding: 5px 5px;
+    box-shadow: 0 6px 6px 1px rgba(60, 60, 60, 0.5);
+    overflow: hidden; }
+  .slider .copy {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff; }
+
+/***
+lightbox styling
+***/
+.overlay {
+  display: none;
+  background-image: url("images/search.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  pointer-events: none; }
+  .overlay p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .7em;
+    color: #00FFFF; }
 
 @media screen and (max-width: 1200px) {
   #item-container .item img {
-    width: 140px;
-    height: 100px; } }
+    width: 190px;
+    height: 130px; }
+  #item-container .item-text {
+    margin-top: 25px; } }
 
 @media screen and (max-width: 980px) {
   #item-container .item img {
-    width: 120px;
-    height: 80px; }
+    width: 160px;
+    height: 110px; }
   p {
     font-size: .9em; } }
 
@@ -289,20 +346,28 @@ nav {
   #item-container p {
     font-size: .8em; } }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 760px) {
   #item-container {
     width: 420px; }
-    #item-container .item-details {
-      height: 390px; }
+    #item-container .item-text {
+      width: 320px;
+      height: 450px;
+      margin-top: 120px;
+      margin-left: 10px; }
     #item-container .item {
       border-bottom: 1px solid #000;
       border-right: none;
-      height: 480px; }
+      height: 530px;
+      width: 420px;
+      margin-left: 20px; }
       #item-container .item:nth-child(5), #item-container .item:nth-child(9) {
         border-bottom: 1px solid #000; }
+      #item-container .item .add {
+        margin-top: 140px;
+        margin-left: 10px; }
       #item-container .item img {
-        width: 300px;
-        height: 200px; }
+        width: 350px;
+        height: 220px; }
       #item-container .item button {
         width: 300px;
         height: 60px; }
@@ -314,15 +379,13 @@ nav {
     width: 80%;
     font-size: .7em; }
     nav li {
-      margin-left: 3px; }
+      margin-left: 23px; }
   header {
     width: 80%;
     font-size: .9em; }
   .cart-item-container {
     width: 500px; } }
 
-@media screen and (max-width: 565px) {
-  header h1 {
-    margin-left: -80px; }
-  nav {
-    font-size: .6em; } }
+@media screen and (max-width: 640px) {
+  nav li {
+    margin-left: 10px; } }

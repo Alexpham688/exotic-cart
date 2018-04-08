@@ -85,9 +85,6 @@ $(function() {
     priceTotal -= price;
     $('.cart-total').html('Total: $ ' + priceTotal);
 
-    // if(itemCount === 1) {
-    //   $('.open').css('color', 'blue');
-    // }
 
     if(itemCount === 1) {
       $('.open').css('color', 'white' );
@@ -106,6 +103,8 @@ $(function() {
     $('nav li a').removeClass('active');
     //then update active to clicked button
     $(this).parent().addClass('active');
+    var exotic = $(this).html().toLowerCase().replace(" ", '-');
+    //remove hidden class if "all exotics" is selecteds
     if(exotic === 'all-exotics') {
       //show all elements
       $('#item-container').children('.item').show(500);
@@ -117,4 +116,43 @@ $(function() {
     }
     return false;
   });
+    //image swap
+    $('.one img').on('click', function(e) {
+      var newImg = $(this).attr('class');
+      var oldImg = $('#ferrari').attr('class');
+      $('#ferrari ').fadeOut(function() {
+        $('#ferrari').removeClass(oldImg).addClass(newImg).fadeIn(800);
+        e.preventDefault();
+      });
+    });
+
+    $('div.item-image a').on('mouseenter', function() {
+      var title = $(this).data('title');
+      var desc = $(this).data('desc');
+
+      //validation
+      if(desc === "") {
+        desc = "click to enlarge";
+      }
+      if(title === "") {
+        title = "";
+      }
+
+      //create div overlay
+      $(this).append('<div class="overlay"></div>');
+      //get overlay div
+      var overlay = $(this).children('.overlay');
+      //add html to overlay
+      overlay.html('<p>' + desc + '</p>');
+      overlay.fadeIn(600);
+    });
+    //mouse leave function
+    $('div.item-image a').on("mouseleave", function() {
+      //create overlay div
+      $(this).append('<div class="overlay"></div>');
+      //get overlay div
+      var overlay = $(this).children('.overlay');
+      //fadeout overlay
+      overlay.fadeOut(100);
+    });
 });
