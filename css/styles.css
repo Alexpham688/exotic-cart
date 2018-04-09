@@ -68,10 +68,11 @@ header {
       color: #CE0000;
       border: 1px solid #00FFFF;
       background-position: 0;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      opacity: .5; }
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out;
+      opacity: .5;
+      box-shadow: 0 6px 6px 0 rgba(60, 60, 60, 0.5); }
     header button:active {
       background: #CE0000;
       color: #fff; }
@@ -105,6 +106,8 @@ header {
     transition: all 0.3s linear; }
     #shopping-cart .cart-item-container h4, #shopping-cart .cart-item-container h2 {
       text-transform: uppercase; }
+    #shopping-cart .cart-item-container p {
+      font-style: italic; }
     #shopping-cart .cart-item-container .cart-items {
       width: 580px;
       margin: 20px 20px; }
@@ -134,7 +137,6 @@ header {
   #shopping-cart img {
     width: 400px;
     height: 250px;
-    box-shadow: 0 6px 6px 1px rgba(60, 60, 60, 0.5);
     -webkit-transition: all 4s ease-in-out;
     -moz-transition: all 4s ease-in-out;
     transition: all 4s ease-in-out;
@@ -158,9 +160,10 @@ header {
       background: #999;
       color: #fff;
       border: 1px solid #00FFFF;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
+      -webkit-transition: all 0.8s ease-in-out;
+      -moz-transition: all 0.8s ease-in-out;
+      transition: all 0.8s ease-in-out;
+      box-shadow: 0 5px 5px 0 rgba(160, 160, 160, 0.5); }
     #shopping-cart .remove-item:active {
       background: #CE0000;
       color: #fff; }
@@ -274,38 +277,11 @@ nav {
       #item-container .item .item-image img:hover {
         box-shadow: 0 12px 12px 0 rgba(60, 60, 60, 0.5); }
 
-.slider {
-  width: 600px;
-  height: 400px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden; }
-  .slider img {
-    width: 610px;
-    height: 410px; }
-  .slider .gallery {
-    position: relative;
-    float: right;
-    width: 600px;
-    height: 400px;
-    border: 1px solid #ccc;
-    padding: 5px 5px;
-    box-shadow: 0 6px 6px 1px rgba(60, 60, 60, 0.5);
-    overflow: hidden; }
-  .slider .copy {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: auto;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff; }
-
 /***
 lightbox styling
 ***/
 .overlay {
   display: none;
-  background-image: url("images/search.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -318,7 +294,7 @@ lightbox styling
   pointer-events: none; }
   .overlay p {
     font-family: 'Ubuntu', sans-serif;
-    font-size: .7em;
+    font-size: 1em;
     color: #00FFFF; }
 
 @media screen and (min-width: 1100px) and (max-width: 1860px) {
@@ -329,8 +305,10 @@ lightbox styling
     width: 200px; }
   #item-container .item-text {
     margin-top: 35px;
-    width: 300px;
-    height: 170px; } }
+    width: 280px;
+    height: 170px; }
+  .overlay p {
+    font-size: 1.3em; } }
 
 @media screen and (min-width: 980px) and (max-width: 1100px) {
   #item-container .item img {
@@ -388,7 +366,9 @@ lightbox styling
     width: 80%;
     font-size: .9em; }
   .cart-item-container {
-    width: 500px; } }
+    width: 500px; }
+  .overlay p {
+    font-size: 1.3em; } }
 
 @media screen and (max-width: 640px) {
   nav li {
