@@ -248,21 +248,12 @@ nav {
       background-position: 0;
       background: #999;
       color: #00FFFF;
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.8s ease-in-out;
+      -moz-transition: all 0.8s ease-in-out;
+      transition: all 0.8s ease-in-out;
       opacity: .6;
-      border: 1px solid #00FFFF; }
-  #item-container .item img {
-    margin: 5px auto;
-    width: 170px;
-    height: 120px;
-    z-index: -1;
-    box-shadow: 0 6px 6px 1px rgba(60, 60, 60, 0.5);
-    -webkit-transition: all 4s ease-in-out;
-    -moz-transition: all 4s ease-in-out;
-    transition: all 4s ease-in-out;
-    cursor: pointer; }
+      border: 1px solid #00FFFF;
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.5); }
   #item-container .item h4 {
     text-transform: uppercase;
     height: 50px;
@@ -275,11 +266,13 @@ nav {
     #item-container .item .item-image img {
       margin: 5px auto;
       z-index: -1;
-      box-shadow: 0 6px 6px 1px rgba(60, 60, 60, 0.5);
-      -webkit-transition: all 4s ease-in-out;
-      -moz-transition: all 4s ease-in-out;
-      transition: all 4s ease-in-out;
+      box-shadow: 0 3px 3px 1px rgba(60, 60, 60, 0.5);
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       cursor: pointer; }
+      #item-container .item .item-image img:hover {
+        box-shadow: 0 12px 12px 0 rgba(60, 60, 60, 0.5); }
 
 .slider {
   width: 600px;
@@ -328,7 +321,18 @@ lightbox styling
     font-size: .7em;
     color: #00FFFF; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1100px) and (max-width: 1860px) {
+  #item-container .item img {
+    width: 230px;
+    height: 135px; }
+  #item-container .item .add {
+    width: 200px; }
+  #item-container .item-text {
+    margin-top: 35px;
+    width: 300px;
+    height: 170px; } }
+
+@media screen and (min-width: 980px) and (max-width: 1100px) {
   #item-container .item img {
     width: 190px;
     height: 130px; }
